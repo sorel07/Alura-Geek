@@ -1,0 +1,160 @@
+/* Importar fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  margin: 0;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+header {
+  background-color: #5300C8;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+header .logo {
+  font-size: 24px;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.productos {
+  width: 60%;
+}
+
+.productos h1 {
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 20px; /* Espacio entre las tarjetas */
+    padding: 10px; /* Espaciado interno para separar del borde del contenedor */
+    border: 2px solid #03318C; /* Para enmarcar el bloque */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #ffffff; /* Fondo blanco para destacar el bloque */
+    overflow-y: auto; /* Activar desplazamiento si hay demasiadas tarjetas */
+    max-height: 600px; /* Limitar la altura del contenedor */
+}
+
+.producto {
+    background-color: #5300C8;
+    color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.producto img {
+    width: 100px; /* Ajustar tamaño de las imágenes */
+    height: 100px;
+    object-fit: cover; /* Asegurar que las imágenes se ajusten bien al contenedor */
+    border-radius: 5px;
+}
+
+.producto p {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.producto span {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.producto .eliminar {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.productos h1 {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 10px; /* Separación del título */
+}
+
+.agregar-producto {
+  width: 30%;
+}
+
+.agregar-producto h2 {
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+}
+
+.agregar-producto form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.agregar-producto input {
+  padding: 10px;
+  border: 2px solid #03318C;
+  border-radius: 5px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.agregar-producto .botones {
+  display: flex;
+  justify-content: space-between;
+}
+
+.agregar-producto button {
+  background-color: #03318C;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+}
+
+footer {
+  background-color: #5300C8;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* Responsive para dispositivos móviles */
+@media (max-width: 768px) {
+    main {
+      flex-direction: column; /* Cambia de horizontal a vertical */
+      align-items: center;   /* Centra los elementos */
+    }
+  
+    .agregar-producto, 
+    .productos {
+      width: 100%; /* Ocupa todo el ancho disponible */
+      text-align: center; /* Centrar el contenido */
+    }
+  
+    .galeria {
+      justify-content: center;
+    }
+  }
